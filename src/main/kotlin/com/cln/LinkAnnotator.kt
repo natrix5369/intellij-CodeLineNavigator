@@ -1,5 +1,5 @@
 // src/main/kotlin/com/example/codenavigator/LinkAnnotator.kt
-package com.example.codelinknavigator
+package com.cln
 
 import com.intellij.lang.annotation.AnnotationHolder
 import com.intellij.lang.annotation.Annotator

@@ -1,5 +1,5 @@
 <idea-plugin>
-    <id>com.example.codelinknavigator</id>
+    <id>com.cln</id>
     <name>Code Link Navigator</name>
     <version>1.0</version>
     <vendor email="pjotremelin4@gmail.com" url="https://t.me/natrixon">@natrixon</vendor>
@@ -23,15 +23,15 @@
     <depends>com.intellij.modules.lang</depends>
 
     <actions>
-        <action id="GoToFileAction" class="com.example.codelinknavigator.GoToFileAction" text="Go to File">
+        <action id="GoToFileAction" class="com.cln.GoToFileAction" text="Go to File">
             <add-to-group group-id="EditorPopupMenu" anchor="last"/>
         </action>
     </actions>
 
 
     <extensions defaultExtensionNs="com.intellij">
-        <annotator language="" implementationClass="com.example.codelinknavigator.LinkAnnotator"/>
-        <editorFactoryMouseListener implementation="com.example.codelinknavigator.LinkNavigator"/>
+        <annotator language="" implementationClass="com.cln.LinkAnnotator"/>
+        <editorFactoryMouseListener implementation="com.cln.LinkNavigator"/>
     </extensions>
 
 </idea-plugin>

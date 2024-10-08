@@ -1,4 +1,4 @@
-package com.example.codelinknavigator
+package com.cln
 
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.editor.LogicalPosition

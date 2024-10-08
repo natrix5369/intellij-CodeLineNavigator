@@ -20,6 +20,7 @@ intellij {
   plugins.set(listOf(/* Plugin Dependencies */))
 }
 
+
 tasks {
   // Set the JVM compatibility versions
   withType<JavaCompile> {
@@ -31,17 +32,12 @@ tasks {
   }
 
   patchPluginXml {
-    sinceBuild.set("100")
+    sinceBuild.set("220")
     untilBuild.set("")
   }
 
-  signPlugin {
-    certificateChain.set(System.getenv("CERTIFICATE_CHAIN"))
-    privateKey.set(System.getenv("PRIVATE_KEY"))
-    password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
+  publishPlugin {
+    token = providers.gradleProperty("intellijPlatformPublishingToken")
   }
 
-  publishPlugin {
-    token.set(System.getenv("PUBLISH_TOKEN"))
-  }
 }
