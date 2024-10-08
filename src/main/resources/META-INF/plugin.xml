@@ -1,0 +1,37 @@
+<idea-plugin>
+    <id>com.example.codelinknavigator</id>
+    <name>Code Link Navigator</name>
+    <version>1.0</version>
+    <vendor email="pjotremelin4@gmail.com" url="https://t.me/natrixon">@natrixon</vendor>
+
+    <description>
+        <![CDATA[
+      <h2>Code Link Navigator</h2>
+      <p>A plugin to navigate to specific lines in files via comments.</p>
+      <p>Add string in comment: <code># /database/tables.py:42</code></p>
+      <p>Hold <strong>ALT</strong> and double click on the comment<br>
+      Or select the full comment and choose <em>Go to File</em> from the context menu</p>
+      <p>Plugin created on version IDE: 231 (231.9161.41), but it can potentially work on any version.</p>
+      <p>Work for all program lang supports with Intellij</p>
+      <p>Created by: <a href="https://github.com/natrixon">@natrixon</a></p>
+      <p>Telegram: <a href="https://t.me/natrixon">@natrixon</a></p>
+      <p>90% code generated with Copilot :D</p>
+      <p><img src="https://example.com/path/to/your/image.gif" alt="Demonstrate"></p>
+    ]]>
+    </description>
+
+    <depends>com.intellij.modules.lang</depends>
+
+    <actions>
+        <action id="GoToFileAction" class="com.example.codelinknavigator.GoToFileAction" text="Go to File">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+    </actions>
+
+
+    <extensions defaultExtensionNs="com.intellij">
+        <annotator language="" implementationClass="com.example.codelinknavigator.LinkAnnotator"/>
+        <editorFactoryMouseListener implementation="com.example.codelinknavigator.LinkNavigator"/>
+    </extensions>
+
+</idea-plugin>
