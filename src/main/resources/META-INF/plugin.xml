@@ -8,7 +8,9 @@
         <![CDATA[
       <h2>Code Link Navigator</h2>
       <p>A plugin to navigate to specific lines in files via comments.</p>
+      <p>The plugin will search either the full path to the file or the path starting from the project root.</p>
       <p>Add string in comment: <code># /database/tables.py:42</code></p>
+      <p>or: <code>(file:///D:/project/packet/__init__:25)</code></p>
       <p>Hold <strong>ALT</strong> and double click on the comment<br>
       Or select the full comment and choose <em>Go to File</em> from the context menu</p>
       <p>Plugin created on version IDE: 231 (231.9161.41), but it can potentially work on any version.</p>
